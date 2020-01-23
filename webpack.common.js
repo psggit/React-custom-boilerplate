@@ -1,7 +1,7 @@
 
-const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CompressionPlugin = require("compression-webpack-plugin")
 
 module.exports = {
@@ -36,11 +36,12 @@ module.exports = {
     alias: {
       Components: path.resolve(__dirname, "./src/components"),
       Container: path.resolve(__dirname, "./src/container"),
-      Sass: path.resolve(__dirname, "./src/sass")
+      Sass: path.resolve(__dirname, "./src/sass"),
+      Utils: path.resolve(__dirname, "./src/utils")
     },
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Output Management',
       template: './index.html'
