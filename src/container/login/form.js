@@ -4,7 +4,6 @@ const useForm = (callback, validate) => {
 
   const [values, setValues] = useState({})
   const [errors, setErrors] = useState({})
-  const [name, setName] = useState()
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   useEffect(() => {

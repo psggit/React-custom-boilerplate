@@ -47,7 +47,7 @@ function login() {
 
   return (
     <div id="login">
-      <div className="logo">
+      <div className="logo-container">
         <Icon name="logo" />
       </div>
       <h2>Global SKU Dashboard</h2>
@@ -66,7 +66,7 @@ function login() {
             variant="outlined"
           />
 
-          <FormControl className={"input-password"} variant="outlined">
+          <FormControl className="input-field" variant="outlined">
             <InputLabel htmlFor="outlined-adornment-password" className={`${errors.password ? "Mui-error" : undefined}`}>Password</InputLabel>
             <OutlinedInput
               id="outlined-adornment-password"
@@ -91,7 +91,7 @@ function login() {
             />
             {
               errors.password ?
-                <FormHelperText id="outlined-weight-helper-text" className={`${errors.password ? "Mui-error" : ""}`}>*{errors.password}</FormHelperText>
+                <FormHelperText id="outlined-weight-helper-text" className={`${errors.password ? "Mui-error" : ""}`}>* {errors.password}</FormHelperText>
                 : ""
             }
           </FormControl>
